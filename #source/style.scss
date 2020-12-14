@@ -7,15 +7,18 @@ a{text-decoration: none;
 p,span,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
 a:focus, button:focus {outline: #333 auto 2px;}
 body{
-  margin: 0;
-  padding: 0;
-  padding-top: 40px;
-  
+  background: #3E5151;  
+  background: radial-gradient(circle, rgba(62,81,81,0.3) 0%, rgba(17,22,22,0.4) 100%), url('../img/backgrnd.jpg') no-repeat;
+  background-size: cover;
+
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: normal;
   font-weight: 400;
-  color: #000;
+
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100vh;  
   display: flex;
@@ -56,25 +59,27 @@ body{
 
 /*-- MAIN --*/
   .main{
-    margin-bottom: 13em;
-    @media (max-width: 767px){margin-bottom: 5em;}
+    margin-bottom: 5em;
+    @media (max-width: 767px){margin-bottom: 3em;}
   }
-  .main-wrapper{justify-content: space-around; align-items: center; margin: 0 3em;
-    @media (max-width: 992px){flex-wrap: wrap; margin: auto;}
+  .quiz-shadow{
+    box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 0.3);
   }
-  .commerce-text {
+  .commerce-big{@media (max-width: 767px){display: none;}}
+  .commerce-small {
+    display: none;
+    @media (max-width: 767px){display: block;}
     margin-right: 2em; 
-    @media (max-width: 992px){margin: 0;}
+
     text-align: center;
     h1{line-height: 40px;margin-bottom: 0.5em;
       @media (max-width: 400px){font-size: 1.8em;line-height: 34px;}}
     p{margin-bottom: 2em;}
   }
-  .commerce-img {flex: 0 0 400px;
-   @media (max-width: 992px){flex: 1 1 auto;}
-  }
 
-  .button-test{margin-bottom: 36px; transition: all 0.1s ease-out;
+
+  .button-test{margin-bottom: 36px;  transition: all 0.1s ease-out;
+    a{border-radius: 10px;}
       &:hover {transform: scale(1.1);}}
 
 /*-- /MAIN --*/
@@ -84,6 +89,7 @@ body{
     min-height: 140px;
     margin-bottom: 2em;
     h2{
+      text-align: center;
       margin-bottom: 1em;
       @media (max-width: 500px){font-size: 1.2em;}
     }

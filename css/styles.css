@@ -23,14 +23,16 @@ a:focus, button:focus {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  padding-top: 40px;
+  background: #3E5151;
+  background: radial-gradient(circle, rgba(62, 81, 81, 0.3) 0%, rgba(17, 22, 22, 0.4) 100%), url("../img/backgrnd.jpg") no-repeat;
+  background-size: cover;
+  color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: normal;
   font-weight: 400;
-  color: #000;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -88,61 +90,54 @@ body {
 /*-- /HEADER --*/
 /*-- MAIN --*/
 .main {
-  margin-bottom: 13em;
+  margin-bottom: 5em;
 }
 @media (max-width: 767px) {
   .main {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
   }
 }
 
-.main-wrapper {
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 3em;
+.quiz-shadow {
+  box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 0.3);
 }
-@media (max-width: 992px) {
-  .main-wrapper {
-    flex-wrap: wrap;
-    margin: auto;
+
+@media (max-width: 767px) {
+  .commerce-big {
+    display: none;
   }
 }
 
-.commerce-text {
+.commerce-small {
+  display: none;
   margin-right: 2em;
   text-align: center;
 }
-@media (max-width: 992px) {
-  .commerce-text {
-    margin: 0;
+@media (max-width: 767px) {
+  .commerce-small {
+    display: block;
   }
 }
-.commerce-text h1 {
+.commerce-small h1 {
   line-height: 40px;
   margin-bottom: 0.5em;
 }
 @media (max-width: 400px) {
-  .commerce-text h1 {
+  .commerce-small h1 {
     font-size: 1.8em;
     line-height: 34px;
   }
 }
-.commerce-text p {
+.commerce-small p {
   margin-bottom: 2em;
-}
-
-.commerce-img {
-  flex: 0 0 400px;
-}
-@media (max-width: 992px) {
-  .commerce-img {
-    flex: 1 1 auto;
-  }
 }
 
 .button-test {
   margin-bottom: 36px;
   transition: all 0.1s ease-out;
+}
+.button-test a {
+  border-radius: 10px;
 }
 .button-test:hover {
   transform: scale(1.1);
@@ -155,6 +150,7 @@ body {
   margin-bottom: 2em;
 }
 .footer h2 {
+  text-align: center;
   margin-bottom: 1em;
 }
 @media (max-width: 500px) {
